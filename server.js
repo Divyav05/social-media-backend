@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors()); // Enable CORS for all routes
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://divya:ZCegzRUk0jHY36Qf@cluster0.p30nsse.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
